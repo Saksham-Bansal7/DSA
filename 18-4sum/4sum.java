@@ -1,9 +1,6 @@
 class Solution {
     public List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> res = new ArrayList<>();
-
-        if(target == 294967296 || target == -294967297 || target == -294967296) return new ArrayList<>();
-        
         Arrays.sort(nums);
 
         Set<Set<Integer>> set = new HashSet<>();
@@ -22,7 +19,7 @@ class Solution {
                 int k = nums.length - 1;
 
                 while (j < k) {
-                    long sum = nums[i] + nums[j] + nums[k] + nums[l];
+                    long sum =(long) nums[i] + nums[j] + nums[k] + nums[l];
 
                     if (sum == target) {
                         List<Integer> temp = new ArrayList<>();
